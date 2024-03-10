@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style
+  <!--Import Google Icon Font-->
+  /* fallback */
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(file:///android_asset/flutter_assets/assets/html/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+</style>
+  <link rel="stylesheet" href="file:///android_asset/flutter_assets/assets/html/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Kalkulator</a>
+      
+    </div>
+  </nav>
+
+
+  <!-- İnput -->
+
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">swap_calls </i>
+          <input oninput="calculate()" id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">Uzunluq </label>
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <!--  Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Material</th>
+        <th>Say</th>
+      </tr>
+    </thead>
+
+    <tbody id="values">
+  
+    </tbody>
+  </table>
+
+  <script>
+const  materials = [
+  {
+    spendCount:2,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/c.jpeg',
+  },
+  {
+    spendCount:5,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/a.jpeg',
+  },
+  {
+    spendCount:4,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/b.jpeg',
+  },
+]
+
+
+  function calculate() {
+    $('tbody').empty()
+    const longness = $('#icon_prefix').val();
+    
+    materials.forEach(function(material){
+      let spendCount = (longness / material.longness) * material.spendCount
+      addRow(material.img,spendCount+' eded')
+    })
+  }
+    function addRow(img,say) {
+
+      // Create a new row
+      var newRow = $('<tr>');
+
+      // Create three new columns and append them to the row
+      var col1 = $('<td>').text(say);
+      var col3 = $('<td>');
+      var image = $('<img>').attr('height',100).attr('src', img).attr('alt', 'Example Image');
+      col3.append(image);
+
+
+      newRow.append(col3,col1,);
+
+      // Append the row to the tbody
+    
+      $('tbody').append(newRow);
+    }
+
+    // Add row button click event
+    $('#addRowBtn').click(function () {
+      addRow();
+    });
+  </script>
+
+
+  <script src="file:///android_asset/flutter_assets/assets/jss/materialize.min.js"></script>
+  <script src="file:///android_asset/flutter_assets/assets/jss/jquery.js"></script>
+
+</body>
+
+</html>
