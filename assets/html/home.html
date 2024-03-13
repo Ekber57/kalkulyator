@@ -77,45 +77,210 @@
   <script>
 const  materials = [
   {
-    spendCount:2,
-    longness : 2.5,
-    img : 'file:///android_asset/flutter_assets/assets/images/c.jpeg',
-  },
-  {
-    spendCount:5,
-    longness : 2.5,
-    img : 'file:///android_asset/flutter_assets/assets/images/a.jpeg',
-  },
-  {
+    name:'ad 1',
     spendCount:4,
     longness : 2.5,
-    img : 'file:///android_asset/flutter_assets/assets/images/b.jpeg',
+    img : 'file:///android_asset/flutter_assets/assets/images/img1.jpeg',
+  },
+  { 
+    name:'ad 2',
+    spendCount:4,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img2.jpeg',
+  },
+  {
+    name:'ad 3',
+    spendCount:2,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img3.png',
+  },
+  {
+    name:'ad 4',
+    spendCount:6,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img4.jpeg',
+  },
+  {
+    name:'ad 5',
+    spendCount:2,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img5.jpeg',
+  },
+  {
+    name:'ad 6',
+    spendCount:2,
+    longness : 5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img6.jpeg',
+  },
+  {
+    name:'ad 7',
+    spendCount:2,
+    longness : 5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img7.jpeg',
+  },
+  {
+    name:'ad 8',
+    spendCount:6,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img8.jpeg',
+  },
+  {
+    name:'ad 9',
+    spendCount:12,
+    longness : 5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img9.jpeg',
+  },
+  {
+    name:'ad 10',
+    spendCount:2,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img10.jpeg',
+  },
+  {
+    name:'2.46 X',
+    spendCount:3,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img11.jpeg',
+  },
+  {
+    name:'2.16 X',
+    spendCount:2,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img11.jpeg',
+  },
+  {
+    name:'1.58 X',
+    spendCount:2,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img11.jpeg',
+  },
+  {
+    name:'9.6 X',
+    spendCount:1,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img11.jpeg',
+  },
+  {
+    name:'2.89 X',
+    spendCount:2,
+    longness : 5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img11.jpeg',
+  },
+  {
+    name:'6.3 X',
+    spendCount:4,
+    longness : 40,
+    img : 'file:///android_asset/flutter_assets/assets/images/img11.jpeg',
+  },
+  {
+    name:'ad 11',
+    spendCount:2,
+    longness : 5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img12.jpeg',
+  },
+  {
+    name:'80x80',
+    spendCount:2,
+    longness : 5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img13.jpeg',
+  },
+  {
+    name:'ad 12',
+    spendCount:2,
+    longness : 5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img14.png',
+  },
+  {
+    name:'ad 13',
+    spendCount:2,
+    longness : 5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img15.png',
+  },
+  {
+    name:'ad 14',
+    spendCount:4,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img16.jpeg',
+  },
+  {
+    name:'ad 15',
+    spendCount:2,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img17.jpeg',
+  },
+  {
+    name:'ad 16',
+    spendCount:3,
+    longness : 5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img18.png',
+  },
+  {
+    name:'ad 17',
+    spendCount:2,
+    longness : 5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img19.jpeg',
+  },
+  {
+    name:'ad 18',
+    spendCount:1,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img20.png',
+  },
+  {
+    name:'ad 19',
+    spendCount:5,
+    longness : 5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img21.jpeg',
+  },
+  {
+    name:'ad 20',
+    spendCount:9,
+    longness : 5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img22.png',
+  },
+  {
+    name:'ad 21',
+    spendCount:2,
+    longness : 2.5,
+    img : 'file:///android_asset/flutter_assets/assets/images/img23.jpeg',
+  },
+  {
+    name:'3x3 pencere qolu',
+    spendCount:2,
+    longness : 2,
+    img : 'file:///android_asset/flutter_assets/assets/images/img24.jpeg',
   },
 ]
 
 
-  function calculate() {
+
+function calculate() {
     $('tbody').empty()
-    const longness = $('#icon_prefix').val();
+    const longness = parseInt($('#icon_prefix').val());
     
     materials.forEach(function(material){
-      let spendCount = (longness / material.longness) * material.spendCount
-      addRow(material.img,spendCount+' eded')
+      let spendCount = parseInt((longness / material.longness) )* material.spendCount
+      addRow(material.img,parseInt(spendCount)+' eded',material.name)
     })
   }
-    function addRow(img,say) {
+    function addRow(img,say,ad) {
 
       // Create a new row
       var newRow = $('<tr>');
 
       // Create three new columns and append them to the row
       var col1 = $('<td>').text(say);
+      var col2 = $('<td>').text(ad);
       var col3 = $('<td>');
-      var image = $('<img>').attr('height',100).attr('src', img).attr('alt', 'Example Image');
+      var image = $('<img>').attr('width',150).attr('height',100).attr('src', img).attr('alt', 'Example Image');
+      if(image.attr('src') == '/images/img21.jpeg') {
+        image.attr('height',200)
+        image.attr('width',200)
+      }
       col3.append(image);
 
 
-      newRow.append(col3,col1,);
+      newRow.append(col3,col2,col1,);
 
       // Append the row to the tbody
     
